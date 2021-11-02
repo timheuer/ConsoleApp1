@@ -44,6 +44,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.3
       with:
         vs-prerelease: true
+        msbuild-architecture: 'x64'
 
     - name: Build
       run: msbuild 
