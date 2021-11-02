@@ -31,17 +31,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.8.1
-      with:
-        dotnet-version: 6.0.x
-        include-prerelease: true
+    #- name: Setup .NET Core SDK
+    #  uses: actions/setup-dotnet@v1.8.1
+    #  with:
+    #    dotnet-version: 6.0.x
+    #    include-prerelease: true
 
-    - name: dotnet restore
-      run: dotnet restore
+    #- name: dotnet restore
+    #  run: dotnet restore
 
-    - name: vswhere version
-      run: vswhere 
+    #- name: vswhere version
+    #  run: vswhere 
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@x64
@@ -49,5 +49,17 @@ jobs:
         vs-prerelease: true
         msbuild-architecture: x64
 
-    - name: Build
-      run: msbuild 
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@x64
+      with:
+        vs-prerelease: true
+        msbuild-architecture: 'x64'
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@x64
+      with:
+        vs-prerelease: true
+        msbuild-architecture: "x64"
+
+    #- name: Build
+    #  run: msbuild 
