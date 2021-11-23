@@ -32,10 +32,12 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.8.1
+      uses: actions/setup-dotnet@499789684c9a0d41c9b3f0d66a785ba17b1d51ab
       with:
-        dotnet-version: 6.0.x
-        include-prerelease: true
+        dotnet-version: |
+          3.1.x
+          5.0.x
+          6.0.x
 
     - name: dotnet restore
       run: dotnet restore
