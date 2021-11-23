@@ -35,6 +35,7 @@ jobs:
       uses: actions/setup-dotnet@499789684c9a0d41c9b3f0d66a785ba17b1d51ab
       with:
         dotnet-version: |
+          2.1.x
           3.1.x
           5.0.x
           6.0.x
