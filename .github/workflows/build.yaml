@@ -38,6 +38,19 @@ jobs:
       run: |
         echo ${{ runner.OS }}
         echo ${{ runner.os }}
+        
+    - name: Echo test
+      if: runner.OS == 'Windows'
+      run: echo 'Windows OS here'
+    
+    - name: MSBuild
+      if: runner.os == 'Windows'
+      uses: microsoft/setup-msbuild@v1.1
+    
+    - name: echo MSBUild
+      if: runner.os == 'Windows'
+      run: msbuild --version
+      
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1.9.0
       with:
