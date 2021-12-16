@@ -38,7 +38,7 @@ jobs:
       uses: timheuer/bootstrap-dotnet@v1
       id: boostrapper
       with:
-        msbuild: true
+        msbuild: 'true'
     
     - name: echo stuff
       run: echo ${{ steps.bootstrapper.inputs.msbuild }}
