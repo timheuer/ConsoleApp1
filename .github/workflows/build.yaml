@@ -39,9 +39,6 @@ jobs:
       id: boostrapper
       with:
         msbuild: 'true'
-    
-    - name: echo stuff
-      run: echo ${{ steps.bootstrapper.inputs.msbuild }}
       
     - name: MSBuild version
       if: runner.os == 'Windows'
