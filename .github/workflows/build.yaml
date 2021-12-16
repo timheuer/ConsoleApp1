@@ -35,7 +35,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: bootstrap deps
-      uses: timheuer/bootstrap-dotnet@0007e0ac977472a981cc7e330007ea08ea793485
+      uses: timheuer/bootstrap-dotnet@9b1c8b6468632ca511506ab42e3b39efc4ec4233
       id: boostrapper
       with:
         msbuild: 'true'
