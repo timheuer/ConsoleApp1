@@ -37,11 +37,14 @@ jobs:
     - name: bootstrap deps
       uses: timheuer/bootstrap-dotnet@v1
       id: boostrapper
+      with:
+        msbuild: true
     
     - name: echo stuff
       run: echo ${{ steps.bootstrapper.inputs.msbuild }}
       
     - name: MSBuild version
+      if: runner.os == 'Windows'
       run: msbuild --version
 
     - name: dotnet restore
