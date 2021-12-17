@@ -56,3 +56,10 @@ jobs:
 
     - name: dotnet restore
       run: dotnet restore
+
+  deploy:
+    if: $GITHUB_EVENT_NAME == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: something
+        run: echo "this only should be here on a pull request"
