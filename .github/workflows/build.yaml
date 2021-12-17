@@ -58,7 +58,7 @@ jobs:
       run: dotnet restore
 
   deploy:
-    if: $GITHUB_EVENT_NAME == 'pull_request'
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: something
