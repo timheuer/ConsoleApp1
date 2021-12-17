@@ -15,6 +15,13 @@ on:
       - '**/*.md'
       - '**/*.gitignore'
       - '**/*.gitattributes'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.gitignore'
+      - '**/*.gitattributes'
       
 jobs:
   build:
