@@ -43,6 +43,9 @@ jobs:
     
     - name: Echo event name
       run: echo $GITHUB_EVENT_NAME
+    
+    - name: Update run number
+      run: github.run_number = 30
       
     - name: bootstrap deps
       uses: timheuer/bootstrap-dotnet@9b1c8b6468632ca511506ab42e3b39efc4ec4233
